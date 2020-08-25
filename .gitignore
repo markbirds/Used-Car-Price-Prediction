@@ -1,0 +1,3 @@
+.vscode/
+venv/
+server/__pycache__/
