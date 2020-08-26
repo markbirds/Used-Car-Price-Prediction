@@ -11,8 +11,8 @@ def load_artifacts():
 
     with open('server/artifacts/columns.json','r') as f:
         __columns = json.load(f)['columns']
-
-    __model = joblib.load('server/artifacts/used_car_price_model')
+    if __model is None:
+        __model = joblib.load('model/used_car_price_model')
 
 def predict_price(transmission,fuel,previous_owner,year,km_driven):
     global __model
