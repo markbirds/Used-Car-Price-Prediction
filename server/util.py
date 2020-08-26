@@ -33,7 +33,7 @@ def predict_price(transmission,fuel,previous_owner,year,km_driven):
     if fuel_index>=2:
         x[fuel_index] = 1
         
-    return 'test'
+    return str(round(__model.predict([x])[0],2))
 
 if __name__ == '__main__':
     load_artifacts()
