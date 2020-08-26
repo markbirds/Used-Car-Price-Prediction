@@ -9,11 +9,11 @@ def load_artifacts():
     global __model
     global __columns
 
-    with open('artifacts/columns.json','r') as f:
+    with open('server/artifacts/columns.json','r') as f:
         __columns = json.load(f)['columns']
 
     if __model is None:
-        with open('artifacts/used_car_price_model','rb') as f:
+        with open('server/artifacts/used_car_price_model','rb') as f:
             __model = pickle.load(f)
 
 def predict_price(transmission,fuel,previous_owner,year,km_driven):

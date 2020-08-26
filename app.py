@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request,jsonify,url_for
-import util
+import server.util
 
-app = Flask(__name__,template_folder='../client/templates',static_folder='../client/static')
+app = Flask(__name__,template_folder='client/templates',static_folder='client/static')
 
 @app.route('/')
 def index():
@@ -15,8 +15,8 @@ def predict():
       owner = request.form['owner']
       year = int(request.form['year'])
       km_driven = int(request.form['km_driven'])
-      return jsonify({'estimated_price':util.predict_price(transmission,fuel,owner,year,km_driven)})
+      return jsonify({'estimated_price':server.util.predict_price(transmission,fuel,owner,year,km_driven)})
    
 if __name__ == '__main__':
-   util.load_artifacts()
+   server.util.load_artifacts()
    app.run(debug=True)
