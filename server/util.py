@@ -18,6 +18,11 @@ def predict_price(transmission,fuel,previous_owner,year,km_driven):
     global __model
     global __columns
 
+    with open('columns.json','r') as f:
+        __columns = json.load(f)['columns']
+    with open('used_car_price_model.pickle','rb') as file:
+        __model = pickle.load(file)
+
     x = []
     x[:8] = np.zeros(8,dtype='int32')
     x[5] = previous_owner
@@ -33,7 +38,7 @@ def predict_price(transmission,fuel,previous_owner,year,km_driven):
         x[fuel_index] = 1
     if __model is None:
         return __columns
-    return str(round(__model.predict([x])[0],2))
+    return '{:,}'.format(round(__model.predict([x])[0],2))
 
 if __name__ == '__main__':
     load_artifacts()
