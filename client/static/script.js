@@ -5,13 +5,13 @@ $(document).ready(function(){
         var owner = $('#owner').val()
         var year = $('#year').val()
         var km_driven = $('#km_driven').val()
-        $('#wait').html(
-            '<button class="btn btn-danger btn-lg">'+
-                '<span class="spinner-border spinner-border-lg"></span>'+
-                'Estimating price. Please wait.'+
-            '</button>'
-        );
         if(transmission&&fuel&&owner&&year&&km_driven){
+            $('#wait').html(
+                '<button class="btn btn-danger btn-lg">'+
+                    '<span class="spinner-border spinner-border-lg"></span>'+
+                    'Estimating price. Please wait.'+
+                '</button>'
+            );
             $('#fill').text('');
             $.post('/predict',{
                 transmission: transmission,
