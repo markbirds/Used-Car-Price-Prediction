@@ -36,4 +36,4 @@ def predict_price(transmission,fuel,previous_owner,year,km_driven):
     return '{:,}'.format(round(__model.predict([x])[0],2))
 
 if __name__ == '__main__':
-    load_model()
+    load_artifacts()
