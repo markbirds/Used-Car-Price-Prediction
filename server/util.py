@@ -1,4 +1,4 @@
-import joblib
+import pickle
 import numpy as np
 import json
 
@@ -11,8 +11,8 @@ def load_artifacts():
 
     with open('server/artifacts/columns.json','r') as f:
         __columns = json.load(f)['columns']
-    if __model is None:
-        __model = joblib.load('model/used_car_price_model')
+    with open('model/used_car_price_model.pickle','rb') as file:
+        __model = pickle.load(file)
 
 def predict_price(transmission,fuel,previous_owner,year,km_driven):
     global __model
@@ -31,7 +31,8 @@ def predict_price(transmission,fuel,previous_owner,year,km_driven):
         x[transmission_index] = 1
     if fuel_index>=2:
         x[fuel_index] = 1
-    __model = joblib.load('model/used_car_price_model')
+    if __model is None:
+        return 'None'
     return str(round(__model.predict([x])[0],2))
 
 if __name__ == '__main__':
