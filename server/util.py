@@ -9,9 +9,9 @@ def load_artifacts():
     global __model
     global __columns
 
-    with open('server/artifacts/columns.json','r') as f:
+    with open('columns.json','r') as f:
         __columns = json.load(f)['columns']
-    with open('model/used_car_price_model.pickle','rb') as file:
+    with open('used_car_price_model.pickle','rb') as file:
         __model = pickle.load(file)
 
 def predict_price(transmission,fuel,previous_owner,year,km_driven):
@@ -32,7 +32,7 @@ def predict_price(transmission,fuel,previous_owner,year,km_driven):
     if fuel_index>=2:
         x[fuel_index] = 1
     if __model is None:
-        return 'None'
+        return __columns
     return str(round(__model.predict([x])[0],2))
 
 if __name__ == '__main__':
