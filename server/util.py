@@ -16,6 +16,9 @@ def load_artifacts():
         __model = joblib.load('server/artifacts/used_car_price_model')
 
 def predict_price(transmission,fuel,previous_owner,year,km_driven):
+    global __model
+    global __columns
+
     x = []
     x[:8] = np.zeros(8,dtype='int32')
     x[5] = previous_owner
