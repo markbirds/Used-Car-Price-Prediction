@@ -6,6 +6,6 @@ My notebook used in data analysis and model building.<br>
 https://github.com/markbirds/Used-Car-Price-Prediction/blob/master/model/car-price-prediction.ipynb
 
 Dataset I used to train the model.<br>
-https://github.com/markbirds/Used-Car-Price-Prediction/blob/master/model/car-price-prediction.ipynb
+https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=CAR+DETAILS+FROM+CAR+DEKHO.csv
 
 Try it on https://mb-used-car-shop.herokuapp.com/
