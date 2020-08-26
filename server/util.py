@@ -31,9 +31,7 @@ def predict_price(transmission,fuel,previous_owner,year,km_driven):
         x[transmission_index] = 1
     if fuel_index>=2:
         x[fuel_index] = 1
-    
-    if __model is None:
-        return 'None value'
+    __model = joblib.load('model/used_car_price_model')
     return str(round(__model.predict([x])[0],2))
 
 if __name__ == '__main__':
