@@ -9,3 +9,7 @@ Dataset I used to train the model.<br>
 https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=CAR+DETAILS+FROM+CAR+DEKHO.csv
 
 Try it on https://mb-used-car-shop.herokuapp.com/
+
+### License
+
+This repository is licensed under the terms of the [MIT License](LICENSE).
