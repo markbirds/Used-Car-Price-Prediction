@@ -12,4 +12,4 @@ Try it on https://mb-used-car-shop.herokuapp.com/
 
 ### License
 
-This repository is licensed under the terms of the [MIT License](LICENSE).
+This project is licensed under the terms of the [MIT License](LICENSE).
