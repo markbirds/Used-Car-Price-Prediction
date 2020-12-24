@@ -6,7 +6,7 @@ https://github.com/markbirds/Used-Car-Price-Prediction/blob/master/model/car-pri
 ### Model score
 ```
 Linear Regression: 0.61
-Lasso Regression: 	0.61
+Lasso Regression: 0.61
 Decision Tree Regression: 0.86
 Random Forest Regression: 0.86
 ```
