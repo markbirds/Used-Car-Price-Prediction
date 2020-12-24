@@ -3,6 +3,9 @@
 ### Jupyter notebook used in Data analysis and Model Building
 https://github.com/markbirds/Used-Car-Price-Prediction/blob/master/model/car-price-prediction.ipynb
 
+### Try it on
+https://mb-used-car-shop.herokuapp.com/
+
 ### Model score
 ```
 Linear Regression: 0.61
