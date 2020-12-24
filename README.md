@@ -1,14 +1,20 @@
-# Used-Car-Price-Prediction
-Predicting prices of second hand cars using regression.<br>
-Model score: 86.44%
+## Used Car Price Prediction
 
-My notebook used in data analysis and model building.<br>
+### Jupyter notebook used in Data analysis and Model Building
 https://github.com/markbirds/Used-Car-Price-Prediction/blob/master/model/car-price-prediction.ipynb
 
-Dataset I used to train the model.<br>
-https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=CAR+DETAILS+FROM+CAR+DEKHO.csv
+### Model score
+```
+Linear Regression: 0.61
+Lasso Regression: 	0.61
+Decision Tree Regression: 0.86
+Random Forest Regression: 0.86
+```
 
-Try it on https://mb-used-car-shop.herokuapp.com/
+### Dataset
+```
+https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho
+```
 
 ### License
 
